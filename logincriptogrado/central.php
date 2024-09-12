@@ -10,7 +10,7 @@
     <h1> 
         Bem vindo a página principal
         <?php 
-           // Criação do array para exibição
+
           $user = "casa";
           $num = md5(123456);
           $pass = $num;
@@ -18,21 +18,21 @@
    
     $array = [$user,$pass];
 
-    // Verifica se o array tem pelo menos dois elementos para evitar erros
+
     if (count($array) > 1) {
-        // Calcula o valor mínimo e máximo do array com base no comprimento das strings
+
         $valormin = min(array_map('strlen', $array));
        $valormax = max(array_map('strlen', $array));
         
-        // Inverte o array
+    
         $reverse = array_reverse($array);
         
-        // Ordena o array
+
         $sorted_array = $array;
         sort($sorted_array);
 
-        // Verifica se o valor do usuário está no array
-        $search = $user; // Exemplo: pesquisando o valor do usuário
+       
+        $search = $user; 
         $found = in_array($search, $sorted_array);
 
         echo "<h2>Detalhes do Array</h2>";
